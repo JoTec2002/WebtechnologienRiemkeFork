@@ -1,0 +1,45 @@
+$color: #00FF00;
+@mixin border {
+    border: 1px solid;
+    padding: 5px;
+}
+h1 {
+    background-color: $color;
+
+}
+
+h2 {
+    background-color: $color;
+}
+.unterbox{
+    @include border;
+    .box{
+        @include border;
+        background-color: aquamarine;
+    }
+
+}
+
+.box {
+  background-color: #ff0000;
+
+  &--border {
+    @extend .box;
+    border: 3px solid;
+  }
+}
+
+$sizes: 10, 20, 50, 100;
+
+@each $size in $sizes {
+  .div-#{$size} {
+    height: #{$size}px;
+    width: #{$size}px;
+  }
+}
+@for $i from 1 through 10 {
+  .div-#{$i} {
+    height: $i * 20 px;
+    width: $i * 20 px;
+  }
+}
