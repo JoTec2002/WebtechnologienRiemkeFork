@@ -1,0 +1,11 @@
+/* line 2, ../../dev/vl/T3INF4221/3-SCSS/scss/test.scss */
+.a.b {
+  color: red;
+}
+
+/* line 8, ../../dev/vl/T3INF4221/3-SCSS/scss/test.scss */
+.a .b {
+  color: red;
+}
+
+/*# sourceMappingURL=test.css.map */

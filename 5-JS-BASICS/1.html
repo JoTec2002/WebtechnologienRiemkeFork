@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.time('mytime');
+        console.log('log');
+        console.error('error');
+        console.table(['Hansi', 'Susi']);
+        console.timeEnd('mytime');
+        let a='5';
+        let b=2;
+        let s1='Hallo ';
+        let s2='Du';
+
+        console.log(a-b);
+        console.log(s1+s2);
+        if(true){
+            console.log('jo');
+        }
+        let f = 'Riemke';
+        let g = new String('Riemke');
+
+    console.log(f instanceof Object);  // false
+    console.log(g instanceof Object); // true
+    let template=`Hallo ${name}`;
+
+    let name='Thorsten Riemke';
+    console.table(name.split(' '))
+    name[0]='D';
+    console.log(name);
+    console.log(template);
+    </script>    
+</body>
+</html>
