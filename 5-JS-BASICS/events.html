@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        body {
+            height: 5000px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', () => {
+            window.addEventListener('keydown', (e) => {
+                console.log(e.key);
+            });
+            const box = document.getElementById('box');
+
+            box.addEventListener('click', () => {
+                console.log('Klick!');
+                box.style.backgroundColor = 'green';
+
+            })
+
+            let scrollEvent = function () {
+                console.log("scrollY: " + window.scrollY);
+                console.log("scrollX: " + window.scrollX);
+            }
+            window.addEventListener("scroll", scrollEvent);
+        })
+    </script>
+    <div id="box"></div>
+</body>
+
+</html>
