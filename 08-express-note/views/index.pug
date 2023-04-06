@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+    h1=title
+    a(href='https://google.com') Google
+    
+    case friends
+        when 0
+            p you have no friends
+        when 1
+            p you have a friend
+        default
+            p you have #{friends} friends
+    each item in notes
+        li= item
+    if authenticated 
+        p willkommen
+    else
+        p nein
+    
+    p #{message}

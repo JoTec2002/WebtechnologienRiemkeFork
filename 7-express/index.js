@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const postit =['Hallo', 'Montag Eis essen']
+
 const products = ["Hammer", "Schraubendreher"];
 
 app.use(express.static('./public'));
