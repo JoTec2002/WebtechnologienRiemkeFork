@@ -3,4 +3,9 @@ extends layout
 block content 
     h1=title
     each item in notes
-         div.note= item
+        div.id= item.id
+        a(href="/delete/"+item.id) Löschen
+        div.note= item.note
+    form(action="/" method="post") 
+        input(type="text", name="note")
+        input(type="submit", value="Neue Notiz") 
