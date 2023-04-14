@@ -12,7 +12,8 @@ block content
         default
             p you have #{friends} friends
     each item in notes
-        li= item
+    .note
+         div(class="note") #{item}
     if authenticated 
         p willkommen
     else
