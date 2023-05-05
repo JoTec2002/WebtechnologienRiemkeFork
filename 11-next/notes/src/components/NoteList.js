@@ -26,8 +26,9 @@ export default function NotesList() {
                         <Note text={note.text} key={note.id} />
                     )
                 }
-                <AddNote handleAddNote={handleAddNote} />
+               
             </div>
+            <AddNote handleAddNote={handleAddNote} />
         </div>
     );
 
