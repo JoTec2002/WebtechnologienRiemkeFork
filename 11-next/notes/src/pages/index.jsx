@@ -12,8 +12,8 @@ export default function Home() {
     <div>
       <Navigation/>
       {
-        namen.map((item)=>
-        <Hallo vorname={item.vorname} nachname={item.nachname} />
+        namen.map((item, index)=>
+        <Hallo key={index} vorname={item.vorname} nachname={item.nachname} />
         )
       }
       <Hallo vorname="Susi" nachname="Super"/>
