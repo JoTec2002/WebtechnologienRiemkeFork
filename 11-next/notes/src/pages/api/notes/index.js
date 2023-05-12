@@ -11,14 +11,15 @@ export default async function handler(req, res) {
     }
 
     if (req.method == 'POST') {
-        console.log(req.body)
-        try{
-            await prisma.notes.create({ data: req.body })
-            return res.status(200).json({ status: "ok" })
-        }catch(e){
-            return res.status(500).json({ status: e })
+        //console.log(req.body)
+        try {
+            const dbResult = await prisma.notes.create({ data: JSON.parse(req.body) })
+            return res.status(200).json({ id: dbResult.id })
+        } catch (e) {
+            console.log(e)
+            return res.status(500).json({ id: 0})
         }
-      
+
     }
 
     return res.status(500)
